@@ -234,7 +234,7 @@ img[alt="dota icon"]{
 }
   
 .swiper-slide { 
-    background-image: url('/img/Обложка_Dota_2.jpg');
+    background-image: url('img/Обложка_Dota_2.jpg');
     background-size: cover;  
     color: rgb(107, 107, 107);
     font-size: 20px;
