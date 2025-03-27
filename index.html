@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Dotalive</title>
+  <link rel="icon" href="img/dota.png">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <section class="header_main">
+
+    <div class="header_icon">
+      <img src="img/dota.png" alt="dota icon">
+      <h2>DotaLive</h2>
+    </div>
+
+    <nav class="header_navigator">
+      <ul>
+        <li><a href="">Прямые эфиры</a></li>
+        <li><a href="">Мета</a></li>
+        <li><a href="">Статистика</a></li>
+        <button>Войти</button>
+      </ul>
+    </nav>
+
+    <div class="header_main_text">
+      <h1>Следите на метой в реальном <span>Времени</span> </h1>
+    </div>
+
+  </section>
+
+  <section>
+    <canvas id="winRateChart"  width="881" height="600"></canvas>
+    <div class="myChart_text">
+      <h1>Важная аналитика</h1>
+      <p>Изучайте где сосредоточены основные герои, <br>
+        в какой категории показана мета, <br>
+        а где самый высокий средний винрейт</p>
+    </div>
+
+    <div class="myChart_text">
+      <h1>Люди как люди</h1>
+      <p>Следите за динамикой винрейта <br> в каждой категории, анализируйте <br> пикрейт, билды, про-игроков и <br>
+        выявляйте актуальные тренды меты</p>
+    </div>
+
+    <div class="myChart_text">
+      <h1>Удобное сравнение</h1>
+      <p>Выводите на один график сразу <br>
+        несколько значений. Сравнивайте <br>
+        периоды и находите факторы роста
+    </div>
+
+    <div class="myChart_block">
+      <h1>Купите подписку</h1>
+      <p>Выводите на один график сразу несколько значений. Сравнивайте периоды и находите факторы роста</p>
+      <button class="MychartBtn">Нажмите сюда</button>
+    </div>
+  </section>
+
+  <section class="dota_player">
+    <img src="/img/pug.jpg" class="pug">
+    <h1>Изучайте конкурентов, <br>
+      следите за трендами, подбирайте
+      <br> для себя героя
+    </h1>
+
+    <div class="main_block_text">
+      <div class="block_text">
+        <h2>They’re all dead!</h2>
+        <p>Матч за топ-3 TI3 между Orange и TongFu. <br>
+          Муши под стяжку Дарк Сира на Свене <br>
+          за пару ударов порезал трех вражеских коров. <br>
+          Реакция LD настолько легендарна, <br>
+          что вы вспомните интонацию, даже просто глядя на текст!</p>
+      </div>
+
+      <div class="block_text">
+        <h2>ДВЕНААААААААДЦАТЬ ТАНГО!</h2>
+        <p>Зидкей пошел играть в Доту с другом-новичком. <br>
+          Тот не знал, как правильно <br>
+          закупаться, и купил аж 12 танго. <br>
+          Увидев это, Зидкей выдал легендарный <br>
+          мем, который сам по себе звучит у вас в голове.</p>
+      </div>
+
+      <div class="block_text">
+        <h2>Ты крип, крипочек</h2>
+        <p>Трэшток Рамзеса в матчмейкинге легендарен. <br> На ютубе найдутся десятки прожарок <br>
+          тиммейтов от Романа Кушнарева, но лишь одна <br> сидит у вас в голове – не пытайтесь <br>
+          это отрицать. Нет смысла смотреть Доту по 20 <br>часов, если вы не знаете эту пасту. <br>
+          Зачем? Для чего?</p>
+      </div>
+
+      <div class="block_text">
+        <h2>НЫЫЫАААААААА</h2>
+        <p>
+          Папич стал примером для подражания у <br>
+          целого поколения дотеров. <br>
+          Это из-за него все жалуются <br>
+          на скрытый пул, агентов Габена и
+          играют «1х9». <br>
+          И, конечно, кричат «НЫААА!!» при каждом крите на WK.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="meta">
+    <div class="meta_header">
+      <h1>Папич - это новый уровень <br> аналитики рынка</h1>
+      <button id="prev" class="scroll-btn"><img src="img/left arrow.svg" class="left_arrow"></button>
+      <button id="next" class="scroll-btn"><img src="img/right arrow.svg" class="right_arrow"></button>
+    </div>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper ">
+        <div class="swiper-slide">
+          Дк 
+           <p class="more-text" style="display: none;">Текст красивый</p>
+           <button class="btn_slide">Подробнее</button>
+         </div>
+        <div class="swiper-slide">
+          Абаддон 
+           <p class="more-text" style="display: none;">Текст красивый</p>
+           <button class="btn_slide">Подробнее</button>
+          </div>
+        <div class="swiper-slide">
+          Чингис  
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button></div>
+
+        <div class="swiper-slide">
+          Slark  
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button>
+        </div>
+        <div class="swiper-slide">
+          Пудж  
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button>
+        </div>
+        <div class="swiper-slide">
+          Рики 
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button>
+        </div>
+        <div class="swiper-slide">
+          Свен 
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button>
+        </div>
+        <div class="swiper-slide">
+          Квопа 
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button>
+        </div>
+        <div class="swiper-slide">
+          Дима билан 
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button>
+        </div>
+        <div class="swiper-slide">
+          Чин чопа 
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button>
+        </div>
+        <div class="swiper-slide">
+          Агр 
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button>
+        </div>
+        <div class="swiper-slide">
+          3 к аналитика 
+          <p class="more-text" style="display: none;">Текст красивый</p>
+          <button class="btn_slide">Подробнее</button></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>  
+
+
+    <section class="how_we_works">
+      <h1>Как мы работаем</h1>
+      <div class="all_block_work">
+        <div class="block_work" id="one_block">
+          <img src="/img/lupa.svg">
+          <p>Ежедневно анализируем <br>
+            графики и мету героев</p>
+        </div>
+
+        <img src="/img/Vector 4.svg" id="vector_4">
+
+        <div class="block_work" id="two_block">
+          <img src="/img/paper.svg">
+          <p>Собранные данные <br>
+            формируем в удобные <br>
+            📈 графики и 📒 таблицы</p>
+        </div>
+
+        <img src="/img/Vector 5.svg" id="vector_5">
+
+        <div class="block_work" id="three_block">
+          <img src="/img/stata.svg">
+          <p>Сравнивайте данные <br>
+            за разные периоды <br>
+            анализируйте героев, <br>
+            тренды или статистику <br>
+            🔥🔥🔥</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="humans">
+      <h1>Наши аналитики</h1>
+
+      <div class="all_humans">
+        <div class="block_human">
+          <img src="/img/one_man.png" alt="">
+          <h2>Папич</h2>
+          <p>Получать регулярную информацию о деятельности <br>
+            конкурентов.Отчет поможет эффективней <br>
+            планировать свои маркетинговые мероприятия, <br>
+            быть в курсе активностей конкурентов, следить за <br>
+            тем, в какие направления инвестируют игроки.
+        </div>
+
+        <div class="block_human">
+          <img src="/img/two_man.png">
+          <h2>Чингис</h2>
+          <p>Получить независимый взгляд на свой бизнес.<br>
+            Отчет поможет сравнить показатели и динамику <br>
+            развития своего бизнеса с бизнесом <br>
+            конкурентов,оценить качество работы отделов.</p>
+        </div>
+
+        <div class="block_human">
+          <img src="/img/three_man.png">
+          <h2>Nix</h2>
+          <p>Провести детальный конкурентный анализ при <br>
+            планировании стратегии продвижения для своих <br>
+            клиентов. Отчет поможет сформировать идеи <br>
+            для позиционирования и отстройки от конкурентов, в <br>
+            том числе и в медийных и perfomance кампаниях.</p>
+        </div>
+
+        <div class="block_human" id="two_block_human">
+          <img src="/img/girl_one.png">
+          <h2>Закиев</h2>
+          <p>Увидеть объективную картину работы бизнеса. <br>
+            Отчет поможет сформировать вектор развития, <br>
+            расставить приоритеты, понять свои сильные <br>
+            стороны и выявить моменты, которые лучше <br>
+            работают у конкурентов.
+          </p>
+        </div>
+
+        <div class="block_human" id="two_block_human">
+          <img src="/img/space_man.png">
+          <h2>Рожков</h2>
+          <p>Выявить основных игроков и понять расстановку <br>
+            сил на рынке.Отчет поможет разобраться, какие <br>
+            инструменты, каналы и технологии используют <br>
+            конкуренты, сформировать бенчмарки и <br>
+            определить цели.</p>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="main_pay">
+      <div class="pay_header">
+        <h1>Наши тарифы</h1> 
+
+          <button class="week" >Неделя</button>
+          <button class="month">Месяц</button>
+          <button class="3months">3 месяца</button>
+          <button class="6months">6 месяцев</button>
+          <button class="year">Год</button>
+          <button class="forever">Навсегда</button>
+        </h1>
+      </div>
+
+      <div class="skidka">
+        <h2><img src="/img/discount.png">До 31.12.2020 стоимость всех тарифов снижена на -25%</h2>
+      </div>
+
+      <div class="all_pay_block">
+
+        <div class="pay_block">
+          <h1>Basic..................................9900p</h1>
+
+          <p class="good_like">Аналитика.........................................................<img src="/img/like.svg"></p>
+          <p class="good_like">Продажи............................................................<img src="/img/like.svg"></p>
+          <p class="good_like">Скидки...............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Новинки.............................................................<img src="/img/otmeno.svg"></p>
+          <p class="bad_like">Sold out..............................................................<img src="/img/otmeno.svg"></p>
+          <p class="bad_like">Листинг..............................................................<img src="/img/otmeno.svg"></p>
+          <p class="bad_like">Рейтинги............................................................<img src="/img/otmeno.svg"></p>
+          <p class="bad_like">Поиск.................................................................<img src="/img/otmeno.svg"></p>
+
+          <button class="pay_button">Начать прямо сейчас</button>
+        </div>
+
+        <div class="pay_block">
+          <h1>Vip......................................9900p</h1>
+
+          <p class="good_like">Аналитика.........................................................<img src="/img/like.svg"></p>
+          <p class="good_like">Продажи............................................................<img src="/img/like.svg"></p>
+          <p class="good_like">Скидки...............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Новинки.............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Sold out..............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Листинг..............................................................<img src="/img/otmeno.svg"></p>
+          <p class="bad_like">Рейтинги............................................................<img src="/img/otmeno.svg"></p>
+          <p class="bad_like">Поиск.................................................................<img src="/img/otmeno.svg"></p>
+
+          <button class="pay_button">Начать прямо сейчас</button>
+        </div>
+
+        <div class="pay_block">
+          <h1>Demon...............................9900p</h1>
+
+          <p class="good_like">Аналитика.........................................................<img src="/img/like.svg"></p>
+          <p class="good_like">Продажи............................................................<img src="/img/like.svg"></p>
+          <p class="good_like">Скидки...............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Новинки.............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Sold out..............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Листинг..............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Рейтинги............................................................<img src="/img/like.svg"></p>
+          <p class="bad_like">Поиск.................................................................<img src="/img/like.svg"></p>
+
+          <button class="pay_button">Начать прямо сейчас</button>
+        </div>
+      </div>
+
+      <div class="question">
+        <h1>Остались вопросы?<a href=""><img src="img/videoplay.png">Посмотрите видео </a>с подробной демонстрацией возможностей платформы Wepapich</h1>
+      </div>
+    </section>
+
+    <section class="block_why_me">
+          <div class="all_block_me">
+          <h1 class="header_why_me">Почему с нами удобно?</h1>
+
+          <img src="/img/just man.png" class="man_why">
+          <div class="text_all_block_me">
+            <div class="block_text_why">
+              <img src="/img/paper_why.png">
+              <p>Смотрите отчеты на нашей <br> платформе,
+                <strong>экспортируйте в свою <br>
+                   систему </strong> аналитики или получайте <br>
+                    данные по API</p>
+            </div>
+
+            <div class="block_text_why">
+              <img src="/img/cart.png">
+              <p> <strong>Удобная оплата на сайте.</strong> Или счет <br>
+                 для юр.лица или ИП.Закрывающие <br>
+                  документы автоматически <br>
+                  появляются в личном кабинете</p>
+            </div>
+
+            <div class="block_text_why">
+              <img src="/img/6-ka.png">
+              <p>Не нашли нужный вам отчет или <br>
+                маркетплейс? По запросу <br>
+                 построим <strong>кастомный отчет</strong> в <br>
+                  любом удобном вам виде</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="que_section">
+      <h1>Ответы на ваши вопросы</h1>
+
+      <div class="que_container">
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+       
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+       
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+       
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+       
+        <div class="que_btn">
+          <button>Откуда вы знаете папича? <img src="/img/que_arrow.png" id="que"></button>
+          <p>Папич - это новый уровень аналитики рынка?</p>
+        </div>
+
+        <div class="telegram_text">
+            <h1><img src="/img/telegram.svg">Остались вопросы? Задайте в Telegram чате ›</h1>
+        </div>
+    </section>
+
+    <section class="one_see">
+      <img src="/img/mask_puge.webp" class="pubge">
+        <div class="text_pubge">
+          <h1>Лучше один раз увидеть</h1>
+          <p>Дадим вам демо-доступ в личную персональную статистику.<br>
+            Посмотрите как все работает! 
+            </p>
+          <button>Получить демо-доступ</button>
+        </div>
+    </section>
+
+    <section class="email">
+        <div class="all_block_email">
+          <div class="email_block">
+            <h1>Хочешь получать советы по анализу <br>
+              игр? Раз в месяц, без спама</h1>
+          </div>
+
+          <div class="subscribe">
+            <input type="email" placeholder="Введите ваш емэйл ..." class="email-input">
+            <button class="subscribe-button">Подписаться</button>
+          </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <footer class="footer_blocks">
+          <div class="with_us">
+              <img src="/img/email.png" class="email_footer">
+              <h1>Свяжитесь с нами</h1>
+              <p>Если у вас остались вопросы или хотите <br>
+                 обсудить сотруденичество, пишите:</p>
+              <a href="https://www.youtube.com/@HiddenPool">hello@papich.ru</a>
+              <br>
+              <a href="https://www.youtube.com/@HiddenPool">papich.ru</a>
+          </div>
+
+          <div class="catalog_footer">
+            <a href="https://www.youtube.com/@HiddenPool">Тамада</a>
+            <a href="https://www.youtube.com/@HiddenPool">Конкурсы</a>
+            <a href="https://www.youtube.com/@HiddenPool">Песни</a>
+            <a href="https://www.youtube.com/@HiddenPool">Дикий никс</a>
+          </div>
+
+          <div class="social_media">
+            <img src="/img/small telegram.svg">
+            <img src="/img/facebook.svg" class="facebook">
+            <h1>Следите за нами <br>
+               в соц сетях</h1>
+          </div>
+
+          <div class="about_line">
+            <div class="line"></div>
+            <div class="line_text">
+              <p>© 2019-2025 We papich. Все права защищены</p>
+              <a href="https://www.youtube.com/@HiddenPool">Лицензионное соглашение</a>
+              <a href="https://www.youtube.com/@HiddenPool">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </footer>
+    </section>
+</body>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".btn_slide").forEach(button => {
+        button.addEventListener("click", function () {
+            let text = this.previousElementSibling;
+
+            if (text.style.display === "none" || !text.style.display) {
+                text.style.display = "block";
+                this.textContent = "Скрыть";
+            } else {
+                text.style.display = "none";
+                this.textContent = "Подробнее";
+            }
+        });
+    });
+});
+
+  fetch('https://api.opendota.com/api/heroStats')
+  .then(response => response.json())
+  .then(data => {
+      const dragonKnight = data.find(hero => hero.id === 49);
+      if (dragonKnight) {
+          const pickTrend = dragonKnight.pub_pick_trend;
+          const winTrend = dragonKnight.pub_win_trend;
+
+          if (pickTrend && winTrend && pickTrend.length === winTrend.length) {
+              const labels = pickTrend.map((_, index) => `${index + 11.03}`);
+              const winRates = pickTrend.map((picks, index) => 
+                  picks > 0 ? (winTrend[index] / picks) * 100 : 0
+              );
+
+              createChart(labels, winRates);
+          }
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+
+  function createChart(labels, values) {
+    const ctx = document.getElementById('winRateChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Win Rate Trend',
+                data: values,
+                backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                borderColor: '#4CAF50',
+                borderWidth: 2,
+                pointBackgroundColor: '#388E3C',
+                pointBorderColor: '#fff',
+                pointRadius: 5,
+                fill: true
+            }]
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    suggestedMax: 100,
+                    ticks: {
+                        callback: value => value + '%'
+                    }
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: tooltipItem => `${tooltipItem.raw.toFixed(2)}%`
+                    }
+                }
+            }
+        }
+    });
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 8,
+      speed: 400, 
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      navigation: {
+        prevEl: '#prev', 
+        nextEl: '#next',  
+      },
+    });
+  });
+
+  document.querySelectorAll('.que_btn button').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.nextElementSibling;
+      
+      if (answer.classList.contains('active')) {
+        answer.classList.remove('active');
+        item.style.borderBottom = '0.1px solid #E7EBEB';
+      } else {
+        answer.classList.add('active');
+        item.style.borderBottom = 'none';
+      }
+    });
+  });
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const prices = {
+        "week": 2500,
+        "month": 9900,
+        "3months": 27000,
+        "6months": 50000,
+        "year": 90000,
+        "forever": 150000
+    };
+
+    document.querySelectorAll(".pay_header button").forEach(button => {
+        button.addEventListener("click", function () {
+            const period = this.className; 
+            document.querySelectorAll(".pay_block h1").forEach((title) => {
+                title.innerHTML = title.innerHTML.replace(/\d+p/, prices[period] + "p");
+            });
+        });
+    });
+  });
+</script>
+
+</html

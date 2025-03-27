@@ -1,0 +1,886 @@
+/* Стили для тела */
+
+html {
+    font-family: 'Gerbera', sans-serif;
+    color: #333D37;
+    overflow-x: hidden;
+    margin: 0;
+    width: 1920px;
+    position: relative;
+}
+
+/* Стили для header */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_icon{
+    margin-top: 40px;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.header_icon h2 {
+    font-family: "Sofia Pro",sans-serif;
+    position: relative;
+    left: 30px;
+}
+
+.header_navigator {
+    position: relative;
+    top: -100px;
+    left: 1250px;
+}
+
+
+.header_navigator a {
+    color: #6E6E6E;
+    font-weight: 400; 
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.header_navigator a:hover{
+    color: #535353;
+    text-decoration: underline;
+}
+
+
+.header_navigator ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.header_navigator li {
+    padding: 15px;
+}
+
+
+.header_navigator button{
+    width: 100px;
+    height: 51px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(165, 55, 55);
+    background-color: white;
+    border-color: rgb(165, 55, 55);
+    border-radius: 24px;
+    border-style: solid;
+}
+
+.header_navigator button:hover{
+    background-color: rgb(165, 55, 55);
+    color: white;
+}
+
+img[alt="dota icon"]{
+    background-color: transparent;
+    color: #111111;
+    position: relative;
+    margin-bottom: -16px;
+    left: 36px;
+    width: 70px;
+}
+
+.header_main_text{
+    text-align: center;
+    font-size: 36px;
+}
+
+
+.header_main_text span{
+    color: brown;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Стили 1 блок */
+
+.chart{
+    margin-bottom: 517px;
+}
+
+#winRateChart{
+    position: relative;
+    top: 30px;
+    left: 200px;
+}
+
+.myChart_text{
+    position: relative;
+    left: 1250px;
+    top: -560px;
+}
+
+.myChart_text h1{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.myChart_text p{
+    margin-top: -10px;
+    font-size: 18px;
+    color: #00000080;
+    font-weight: 600;
+}
+
+.myChart_block{
+    position: relative;
+    background-color: brown;
+    border: none;
+    border-radius: 15px;
+    text-align: left;
+    color: #FFFFFF;
+    padding: 10px;
+    padding-left: 20px;
+    width: 308px;
+    height: 224px;
+    left: 1250px;
+    top: -550px;
+    margin-bottom: 217px;
+}
+
+.myChart_block h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.myChart_block p {
+    font-size: 16px;
+    padding-left: 1px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.MychartBtn{
+    position: relative;
+    bottom: -10px;
+    left: 10px;
+    width: 280px;
+    height: 55px;
+    border: none;
+    color: rgb(187, 47, 47);
+    font-size: 18px;
+    align-items: center;
+    background-color:#FFFFFF;
+    border-radius: 8px;
+}
+
+.MychartBtn:hover{
+    color: #ffffff;
+    background-color: rgb(131, 37, 37);
+}
+
+/* Стили 2 блок */
+.pug{
+    position: relative;
+    left: 1400px;
+    top: 570px;
+    border-radius: 12px;
+}
+.dota_player{
+    margin-top: -900px;
+}
+
+.dota_player h1{
+    margin-left: 100px;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.main_block_text{
+    display: grid;
+    grid-template-columns: repeat(2, 0.4fr);
+    margin-left: 100px;
+    gap: 0px;
+}
+
+.block_text{
+    padding: 10px;
+}
+
+.block_text h2{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.block_text p{
+    margin-top: -10px;
+    color: #6E6E6E;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34.76px;
+}
+
+/* Стили 3-го блока */
+.meta_header h1{
+    font-size: 36px;
+    font-weight: 900;
+    margin-left: 120px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 375px;
+}
+  
+  
+.swiper-wrapper {
+    gap: 35px;
+    padding: 10px;
+}
+  
+.swiper-slide { 
+    background-image: url('/img/Обложка_Dota_2.jpg');
+    background-size: cover;  
+    color: rgb(107, 107, 107);
+    font-size: 20px;
+    text-align: center;
+    line-height: 150px;
+    border-radius: 10px;    
+}
+
+.more-text{
+    position: absolute;
+    color: rgba(73, 102, 197, 0.611);
+    top: 15px;
+    left: 50px;
+}
+
+
+.btn_slide{
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    border: none;
+    color: #d2d2d2;
+    font-weight: 600;
+    background-color: rgba(165, 42, 42, 0);
+}
+
+.swiper-pagination {
+    position: relative !important;
+}
+
+.swiper-pagination-progressbar-fill{
+    background: rgb(180, 50, 50) !important;
+
+}
+  
+.scroll-btn {
+    position: relative;
+    left: 1600px;
+    bottom: 50px;
+    background: rgb(180, 50, 50);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.scroll-btn img{
+    position: relative;
+    top: 1px;
+    gap: 10px;
+}
+
+#prev {
+    position: relative;
+    left: 1595px;
+}
+
+
+/* Стили 3-го блока */
+
+.how_we_works{
+    height: 439px;
+    margin-top: 148px;
+    margin-left: 200px;
+}
+
+.how_we_works h1{
+    font-weight: 900;
+    font-size: 36px;
+}
+
+
+.all_block_work{
+    position: relative;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.block_work{
+    width: 1241px;
+    height: 439px;
+    line-height: 34.76px;
+    position: absolute;
+}
+
+.block_work img{
+    position: relative;
+    right: 30px;
+    margin-bottom: -40px;
+}
+
+#one_block{
+    top: 77px;
+}
+
+#two_block{
+    top: 173px;
+    left: 470px;
+}
+
+#three_block{
+    left: 940px;
+    top: 20px;
+}
+
+#vector_4{
+    position: absolute;
+    top: 71px;
+    left: 43px;
+}
+
+#vector_5{
+    position: absolute;
+    top: 50px;
+    left: 510px;
+}
+
+/* Стили для 4-го блока */
+
+.humans{
+    margin-top: 247px;
+    margin-left: -8px;
+    height: 1125px;
+    background-color: rgb(241, 193, 193);
+}
+
+.humans h1{
+    position: relative;
+    top: 133px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.all_humans{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 113px;
+}
+
+.block_human{
+    position: relative;
+    top: 133px;
+    display: 1;
+    text-align: center;
+    line-height: 21px;
+}
+
+.block_human h2{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.block_human p{
+    font-size: 20px;
+    font-weight: 550;
+    color: #6E6E6E;
+}
+
+#two_block_human{
+    position: relative;
+    left: 300px;
+    margin-top: 100px;
+}
+
+/* Стили 5-го блока */
+
+.main_pay{
+    margin-top: 122px;
+}
+
+.pay_header{
+    display: flex;
+    margin-left: 120px;
+}
+
+.pay_header h1{
+    font-size: 36px;
+}
+
+.pay_header button{
+    position: relative;
+    left: 634px;
+    width: 110px;
+    height: 44px;
+    font-size: 18px;
+    font-weight: 550;
+    color: brown;
+    border: none;
+    background-color: #FFFFFF;
+
+}
+
+.pay_header button:hover{
+    background-color: brown;
+    color: #FFFFFF;
+}
+
+.skidka{
+    width: 1590px;
+    height: 75px;
+    margin-left: 121px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: #E7EBEB 1px solid;
+}
+
+.skidka h2{
+    position: relative;
+    color: #6E6E6E;
+    top: -12px;
+}
+
+.skidka img{
+    position: relative;
+    top: 10px;
+    padding-right: 15px;
+}
+
+.all_pay_block{
+    margin-top: 40px;
+    display: flex;
+    gap: 0px;
+    justify-content: center; 
+}
+
+.pay_block h1{
+    font-size: 24px;
+    font-size: 900;
+}
+
+
+.pay_block p{
+    font-size: 16px;
+    font-size: 400;
+}
+
+
+.pay_block {
+    border: none;
+    padding: 15px 32px;
+    border-radius: 12px;
+}
+
+.pay_block:hover{
+    background-color: rgba(240, 67, 67, 0.568);
+    border: 1px rgb(185, 185, 185);
+}
+
+.pay_block:hover .pay_button {
+    background-color: rgba(112, 8, 8, 0.568); 
+    border: none;
+    color: white; 
+}
+
+.good_like, .bad_like{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.pay_button {
+    font-family: 'Gerbera', sans-serif;
+    font-size: 20px;
+    color: brown;
+    border: solid 1px;
+    border-color: brown;
+    background-color: #FFFFFF;
+    width: 362px;
+    height: 56px;
+    border-radius: 333px;
+}
+
+.question h1{
+    font-size: 16px;
+    font-weight: 400 !important;
+    text-align: center;
+}
+
+.question a{
+    color: brown;
+}
+
+.question a:hover{
+    text-decoration: none;
+}
+
+
+.question img{
+    position: relative;
+    padding: 0px 8px;
+    top: 2px;
+}
+
+/* Стили 6-го блока */
+
+.block_why_me{
+    position: relative;
+    margin-top: 56px;
+    background-image: url("img/back_why_me.png");
+    height: 501px;
+}
+
+.man_why{
+    position: absolute;
+    left: -50px;
+    top: 159px;
+}
+
+.all_block_me{
+    padding: 117px 0px;
+    margin-left: 155px;
+}
+
+.header_why_me{
+    font-family: 'Gerbera',sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 57px;
+}
+
+.text_all_block_me{
+    display: flex;
+    justify-content: center;
+    gap:90px
+}
+
+.block_text_why img{
+    width: 44px;
+    height: 44px;
+    position: relative;
+    right: 24px;
+    top: 17px;
+}
+
+.block_text_why{
+    display: flex;
+}
+
+
+.block_text_why p{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 174%;
+}
+
+/* Стили 7-блока */
+
+.que_section{
+    margin-top: 120px;
+    margin-left: 120px;
+}
+
+.que_section h1{
+    margin-left: 12px;
+    font-weight: 550;
+    font-size: 32px;
+}
+
+.que_btn{
+    background: none; 
+    border: none; 
+    text-align: left; 
+    font-size: 20px; 
+    font-weight: bold; 
+    padding: 10px; 
+    cursor: pointer;
+}
+
+
+
+.que_btn p{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.1s ease-out, opacity 0.1s ease-out;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: -17px;
+    margin-bottom: -5px;
+    margin-left: -3px;
+    padding: 10px;
+}
+
+.que_btn p.active {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+.que_btn button{
+    width: 1600px;
+    height: 53px;
+    background: none; 
+    border: none; 
+    text-align: left; 
+    font-size: 20px; 
+    font-weight: bold; 
+    color: brown;
+    cursor: pointer;
+    border-bottom: 0.1px solid #E7EBEB;
+}
+
+#que{
+    position: relative;
+    left: 1300px;
+    bottom: 10px;
+}
+
+.telegram_text{
+    margin-top: 60px;
+    text-align: center;
+    width: 1613px;
+    height: 104px;
+    border-radius: 12px;
+    border: 1px solid #E7EBEB;
+}
+
+.telegram_text h1{
+    margin-top: 12px;
+}
+
+.telegram_text img{
+    position: relative;
+    top: 14px;
+    right: 20px;
+}
+
+/* Стили 8-го блока */
+
+.one_see{
+    margin-left: -8px;
+    position: relative;
+    margin-top: 101px;
+    height: 694px;
+    background-color: #FCF1F1;
+}
+
+.pubge{
+    width: 444px;
+    height: 444px;
+    border-radius: 20px;
+    top: 132px;
+    right: 180px;
+    position: absolute;
+}
+
+.text_pubge{
+    padding: 121px 186px;
+}
+
+.text_pubge h1{
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.text_pubge p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 200%;
+}
+
+.text_pubge button {
+    width: 285px;
+    height: 59px;
+    margin-top: 65px;
+    font-family: "Gerbera",sans-serif;
+    font-weight: 400;
+    font-size: 20px;   
+    border-radius: 333px;
+    border: none;
+    background-color: #962121;
+    color: #FFFFFF;
+}
+
+.text_pubge button:hover{
+    background-color: #af2727;
+    color: #ffeded;
+}
+
+/* Стили 9-го блока */
+
+.email{
+    margin-left: -8px;
+    background-color: #962123;
+}
+
+.email_block h1{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+.all_block_email{
+    display: flex;
+    padding: 32px 175px;
+}
+
+.subscribe {
+    position: relative;
+    top: 25px;
+    left: 411px;
+    align-items: center;
+    background-color: #962123;
+    padding: 10px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.email-input {
+    width: 250px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 440;
+    font-size: 16px;
+    flex: 1;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.email-input::placeholder {
+    color: rgb(255, 255, 255);
+    font-weight: 540;
+    opacity: 0.8;
+}
+
+.subscribe-button {
+    background-color: #f5d6d6;
+    border: none;
+    width: 182px;
+    height: 45px;
+    border-radius: 333px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #962123;
+}
+
+.subscribe-button:hover {
+    color: #7a1c1d;
+    background-color: #e6b2b2;
+}
+
+/* Флутер */
+.footer_blocks{
+    display: flex;
+}
+
+.footer{
+    margin-left: -8px;
+    margin-bottom: -8px;
+    background-color: #333D37;
+}
+
+.email_footer{
+    position: relative;
+    right: 60px;
+    top: 50px;
+}
+
+.with_us{
+    position: relative;
+    bottom: 40px;
+    padding: 60px 0px;
+    margin-left: 241px;
+}
+
+.with_us h1{
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.with_us p{
+    color: #c5c5c5;
+    line-height: 150%;
+}
+.with_us a{
+    color: #c5c5c5;
+    font-size: 16px;
+    line-height: 200%;
+}
+
+.with_us a:hover{
+    text-decoration: none;
+}
+
+.catalog_footer a{
+    display: block;
+    position: relative;
+    top: 80px;
+    left: 420px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 200%;
+    color: #FFFFFF;
+}
+
+.catalog_footer a:hover{
+    text-decoration: none;
+}
+
+.social_media {
+    position: relative;
+    top: 90px;
+    left: 900px;
+    height: 0px;
+}
+.social_media h1{
+    color: #FFFFFF;
+    font-weight: 800;
+    line-height: 160%;
+}
+
+.facebook{
+    padding-left: 15px;
+}
+
+.about_line {
+    position: relative;
+    color: #9F9F9F;
+    height: 0px;
+    top: 300px;
+    right: 380px;
+}
+
+.line {
+    border: 1px solid #3d4641;
+    width: 250%;
+    position: relative;
+    right: 500px;
+}
+.about_line a{
+    color: #9F9F9F;
+    position: relative;
+    top: 16px;
+    padding: 0px 32px;
+    height: 0px;
+}
+
+.line_text{
+    display: flex;
+    height: 0px;
+}
